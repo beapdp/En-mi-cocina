@@ -1,5 +1,7 @@
 import React, { useState, useEffect, useCallback } from 'react';
 import '../styles/menu.css';
+import { IonIcon } from '@ionic/react';
+import { calendarOutline } from 'ionicons/icons';
 
 export const Menu = () => {
   const daysOfWeek = ['Lunes', 'Martes', 'Miércoles', 'Jueves', 'Viernes', 'Sábado', 'Domingo'];
@@ -67,47 +69,53 @@ export const Menu = () => {
   }, []);
 
   return (
-    <div className="menu">
-      {daysOfWeek.map((day) => {
-        const { lunch, dinner } = meals[day];
-        const { lunch: lunchVisible, dinner: dinnerVisible } = inputVisible[day];
+    <div className='menuSemanal-container'>
+      <div className='title-container'>
+        <h2>Planificación semanal</h2>
+        <div className='icon'><IonIcon icon={calendarOutline} /></div>
+      </div>
+      <div className="menu">
+        {daysOfWeek.map((day) => {
+          const { lunch, dinner } = meals[day];
+          const { lunch: lunchVisible, dinner: dinnerVisible } = inputVisible[day];
 
-        return (
-          <div key={day} className="day">
-            <h3 className="day-name">{day}</h3>
-            <div className="meal">
-              <h4>Comida</h4>
-              {lunchVisible ? (
-                <input
-                  type="text"
-                  placeholder="Añadir comida"
-                  onBlur={(e) => addMeal(day, 'lunch', e.target.value)}
-                />
-              ) : (
-                <div>
-                  <p>{lunch}</p>
-                  <button onClick={() => removeMeal(day, 'lunch')}>Eliminar</button>
-                </div>
-              )}
+          return (
+            <div key={day} className="day">
+              <h3 className="day-name">{day}</h3>
+              <div className="meal">
+                <h4>Comida</h4>
+                {lunchVisible ? (
+                  <input
+                    type="text"
+                    placeholder="Añadir comida"
+                    onBlur={(e) => addMeal(day, 'lunch', e.target.value)}
+                  />
+                ) : (
+                  <div>
+                    <p>{lunch}</p>
+                    <button onClick={() => removeMeal(day, 'lunch')}>Eliminar</button>
+                  </div>
+                )}
+              </div>
+              <div className="meal">
+                <h4>Cena</h4>
+                {dinnerVisible ? (
+                  <input
+                    type="text"
+                    placeholder="Añadir cena"
+                    onBlur={(e) => addMeal(day, 'dinner', e.target.value)}
+                  />
+                ) : (
+                  <div>
+                    <p>{dinner}</p>
+                    <button onClick={() => removeMeal(day, 'dinner')}>Eliminar</button>
+                  </div>
+                )}
+              </div>
             </div>
-            <div className="meal">
-              <h4>Cena</h4>
-              {dinnerVisible ? (
-                <input
-                  type="text"
-                  placeholder="Añadir cena"
-                  onBlur={(e) => addMeal(day, 'dinner', e.target.value)}
-                />
-              ) : (
-                <div>
-                  <p>{dinner}</p>
-                  <button onClick={() => removeMeal(day, 'dinner')}>Eliminar</button>
-                </div>
-              )}
-            </div>
-          </div>
-        );
-      })}
+          );
+        })}
+      </div>
     </div>
   );
 };

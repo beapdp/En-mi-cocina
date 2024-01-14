@@ -10,9 +10,20 @@
   
   /* Estilo para el título */
   .shopping-list-container h2 {
-    text-align: center;
     color: rgb(248, 48, 48);
     font-size: 1.5em;
+    margin: 20px;
+  }
+
+  .title-container{
+    display: flex;
+    justify-content: space-between;
+  }
+  .icon{
+    color: red;
+    text-align: center;
+    font-size: 36px;
+    padding: 20px;
   }
   
   /* Estilo para el input */
@@ -24,16 +35,25 @@
     border: 1px solid #ddd;
   }
   
+  .icon{
+    width: 50px;
+  }
   /* Estilo para el botón Agregar */
   .shopping-list-container button {
     padding: 10px 20px;
-    background-color: #72d402d7;
+    background-color: #517953;
     color: #fff;
     border: none;
     border-radius: 5px;
     cursor: pointer;
     display: block;
     margin: 10px auto;
+    
+  }
+  .shopping-list-container button:hover{
+    transform: translateY(-5px);
+    box-shadow: 0 6px 10px 0 hsla(0, 0%, 0%, 0.3);
+    
   }
   
   /* Estilo para la lista de elementos */

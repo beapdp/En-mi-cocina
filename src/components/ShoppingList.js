@@ -1,5 +1,8 @@
 import React, { useState, useEffect } from 'react';
 import '../styles/shoppingList.css';
+import { IonIcon } from '@ionic/react';
+import { cartOutline } from 'ionicons/icons';
+
 
 export const ShoppingList = () => {
     const initialShoppingList = JSON.parse(localStorage.getItem('shoppingList')) || [];
@@ -24,7 +27,10 @@ export const ShoppingList = () => {
 
     return (
         <div className="shopping-list-container">
+            <div className='title-container'>
             <h2>Necesito comprar...</h2>
+            <div className='icon'><IonIcon icon={cartOutline} /></div>
+            </div>
             <input 
                 type='text'
                 value={item}
@@ -42,6 +48,8 @@ export const ShoppingList = () => {
                     </li>
                 ))}
             </ul>
+            
         </div>
+        
     )
 }
