@@ -1,0 +1,72 @@
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  font-family: Arial, sans-serif;
+  background-image: url(../public/images/fondo02.png);
+  color: #333;
+}
+
+h1 {
+  text-align:start;
+  margin-left: 148px;
+  margin-top: 50px;
+  padding: 20px;
+  font-size: 4.5em;
+  color: #e0e0e0;
+  text-shadow: 4px 4px 8px rgb(252, 44, 44);
+  font-family:Verdana, Geneva, Tahoma, sans-serif;
+  
+}
+
+.main-container {
+  margin: 30px auto;
+  display: flex;
+  justify-content: flex-start;
+  flex-wrap: wrap;
+  max-width: 1200px;
+  padding: 20px;
+}
+
+.listAndRecipes-container{
+  display: flex;
+  flex-direction: column;
+  justify-content:flex-start
+}
+
+.aside-container {
+  display: flex;
+  flex-direction: column;
+  justify-content:space-between
+}
+
+
+@media (max-width: 768px) {
+  .main-container {
+    flex-direction: column;
+  }
+
+  .aside-container, .main-container > div {
+    margin: 20px 0;
+  }
+}
+
+/* Estilos existentes... */
+
+@media (max-width: 768px) {
+  .main-container {
+    flex-direction: column;
+  }
+
+  .aside-container, .main-container > div {
+    margin: 20px 0;
+  }
+
+  h1 {
+    font-size: 3em; /* Ajusta el tamaño del título para pantallas pequeñas */
+    margin-left: 20px;
+  }
+}

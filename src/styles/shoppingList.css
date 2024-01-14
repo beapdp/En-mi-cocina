@@ -1,0 +1,80 @@
+/* Estilos para el contenedor general de la lista de compras */
+.shopping-list-container {
+    background-color: #f9f9f9;
+    border-radius: 10px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    padding: 20px;
+    width: 600px;
+    margin: 20px auto;
+  }
+  
+  /* Estilo para el título */
+  .shopping-list-container h2 {
+    text-align: center;
+    color: rgb(248, 48, 48);
+    font-size: 1.5em;
+  }
+  
+  /* Estilo para el input */
+  .shopping-list-container input {
+    width: 100%;
+    padding: 10px;
+    margin: 10px 0;
+    border-radius: 5px;
+    border: 1px solid #ddd;
+  }
+  
+  /* Estilo para el botón Agregar */
+  .shopping-list-container button {
+    padding: 10px 20px;
+    background-color: #72d402d7;
+    color: #fff;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    display: block;
+    margin: 10px auto;
+  }
+  
+  /* Estilo para la lista de elementos */
+  .shopping-list-container ul {
+    list-style: none;
+    padding: 0;
+  }
+  
+ 
+/* Estilo para cada elemento de la lista */
+.shopping-list-container li {
+    background-color: #fff;
+    padding: 10px;
+    border-radius: 5px;
+    margin: 10px 0;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+  }
+  
+  /* Estilo para el texto de cada elemento de la lista */
+  .shopping-list-container li span {
+    flex-grow: 1;
+  }
+  
+  /* Estilo para el checkbox de cada elemento de la lista */
+  .shopping-list-container li input[type="checkbox"] {
+    margin-left: 10px;
+  }
+  
+  /* Estilo para el botón de eliminar elemento */
+  .shopping-list-container li button {
+    background-color: #ff0000a3;
+  }
+
+
+/* Estilos existentes... */
+
+@media (max-width: 768px) {
+  .shopping-list-container {
+    width: 90%; /* Hace que el contenedor ocupe más ancho en pantallas pequeñas */
+    margin: 20px;
+  }
+}
