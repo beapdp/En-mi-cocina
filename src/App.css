@@ -4,11 +4,55 @@
   padding: 0;
 }
 
-body {
-  font-family: Arial, sans-serif;
-  background-image: url(../public/images/fondo02.png);
-  color: #333;
+.link-container{  
+    padding: 20px; /* Espaciado interno */
+    border-radius: 10px; /* Bordes redondeados del contenedor */
+    display: flex; /* Distribución en línea de los botones */
+    flex-direction: column;
+    justify-content: center; /* Centrar los botones horizontalmente */
+    margin-top: 10vh;
+    margin-left: 140vh;
+    width: 300px;
+    background-image: url(../public/images/ipad\ \(2\).png);
+    background-size:auto;
+    height: 350PX;
 }
+.link-container div{
+  display: flex; /* Distribución en línea de los botones */
+  flex-direction: column;
+  justify-content: center;
+  max-width: 230px;
+}
+
+.link-container a {
+  background-color: #b9bfba; /* Color de fondo */
+  color: white; /* Color del texto */
+  padding: 15px 20px; /* Espaciado interno */
+  margin: 10px; /* Margen externo */
+  border: 2px solid gray; /* Sin borde */
+  border-radius: 5px; /* Bordes redondeados */
+  cursor: pointer; /* Cursor tipo puntero */
+  transition: all 0.3s ease; /* Transición suave para los efectos */
+  font-size: 16px; /* Tamaño del texto */
+}
+
+.link-container a{
+  text-decoration: none;
+  color: #694a54;
+}
+
+.link-container a:hover {
+  background-color: #e6f1e9; /* Color al pasar el ratón */
+  box-shadow: 0 8px 16px 0 rgba(0,0,0,0.2); /* Sombra para resaltar */
+  
+}
+
+.link-container a:active {
+  background-color: #367a35; /* Color al hacer clic */
+  box-shadow: 0 5px 12px 0 rgba(0,0,0,0.3); /* Sombra más intensa */
+  transform: translateY(4px); /* Efecto de presión */
+}
+
 
 h1 {
   text-align:start;
@@ -70,4 +114,9 @@ h1 {
     font-size: 3em; /* Ajusta el tamaño del título para pantallas pequeñas */
     margin-left: 20px;
   }
+  .link-container{
+  margin-left: 20vh;
+  margin-top: 40vh;
 }
+}
+

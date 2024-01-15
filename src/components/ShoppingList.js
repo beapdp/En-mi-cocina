@@ -28,10 +28,10 @@ export const ShoppingList = () => {
     return (
         <div className="shopping-list-container">
             <div className='title-container'>
-            <h2>Necesito comprar...</h2>
-            <div className='icon'><IonIcon icon={cartOutline} /></div>
+                <h2>Necesito comprar...</h2>
+                <div className='icon'><IonIcon icon={cartOutline} /></div>
             </div>
-            <input 
+            <input
                 type='text'
                 value={item}
                 onChange={e => setItem(e.target.value)}
@@ -41,15 +41,15 @@ export const ShoppingList = () => {
                 {shoppingList.map(item => (
                     <li key={item.id}>
                         <span>{item.name}</span>
-                        <input 
-                            type="checkbox" 
+                        <input
+                            type="checkbox"
                             onChange={() => removeFromList(item.id)}
                         />
                     </li>
                 ))}
             </ul>
-            
+
         </div>
-        
+
     )
 }
